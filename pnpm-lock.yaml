@@ -87,6 +87,15 @@ importers:
         specifier: ^5.3.3
         version: 5.8.3
 
+  packages/utils:
+    devDependencies:
+      '@types/node':
+        specifier: ^22.14.1
+        version: 22.14.1
+      typescript:
+        specifier: ^5.3.3
+        version: 5.8.3
+
 packages:
 
   '@ampproject/remapping@2.3.0':
