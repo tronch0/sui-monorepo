@@ -11,4 +11,4 @@ export function printMessage(message: string, prefix: string = 'Core'): void {
 /**
  * Core package version
  */
-export const VERSION = '1.0.0'; 
+export const VERSION = '1.0.0';

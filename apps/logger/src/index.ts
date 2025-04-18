@@ -1,22 +1,11 @@
-import { printMessage, VERSION } from '@sui-monorepo/core';
+import { Logger } from './logger';
 
-// Log the core package version
-printMessage(`Using core package version: ${VERSION}`, 'Logger');
-
-// Counter to track the number of messages
-let counter = 0;
-
-// Print a message every second
-setInterval(() => {
-  counter++;
-  printMessage(`Message #${counter}`, 'Logger');
-}, 1000);
+// Create and start the logger
+const logger = new Logger();
+logger.start();
 
 // Handle termination gracefully
 process.on('SIGINT', () => {
-  printMessage('Logger shutting down...', 'Logger');
+  logger.stop();
   process.exit(0);
 });
-
-// Initial log
-printMessage('Logger started!', 'Logger'); 

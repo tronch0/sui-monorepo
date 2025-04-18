@@ -1,7 +1,7 @@
 {
   "name": "sui-monorepo",
   "version": "1.0.0",
-  "description": "",
+  "description": "A monorepo for TypeScript projects with shared core functionality",
   "main": "index.js",
   "private": true,
   "workspaces": [
@@ -9,15 +9,35 @@
     "apps/*"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "pnpm -r build",
-    "dev": "pnpm --filter logger start:dev"
+    "clean": "pnpm -r exec -- rm -rf dist",
+    "dev": "pnpm --filter logger start:dev",
+    "dev:rescan": "pnpm --filter rescan-engine start:dev",
+    "dev:blocks": "pnpm --filter block-processor start:dev",
+    "lint": "eslint . --ext .ts,.tsx",
+    "lint:fix": "eslint . --ext .ts,.tsx --fix",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "test": "jest",
+    "test:coverage": "jest --coverage"
   },
-  "keywords": [],
+  "keywords": [
+    "monorepo",
+    "typescript",
+    "node"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/jest": "29.5.14",
+    "@typescript-eslint/eslint-plugin": "6.21.0",
+    "@typescript-eslint/parser": "6.21.0",
+    "eslint": "8.56.0",
+    "eslint-config-prettier": "10.1.2",
+    "eslint-plugin-prettier": "5.2.6",
+    "jest": "29.7.0",
+    "prettier": "3.5.3",
+    "ts-jest": "29.3.2",
     "typescript": "^5.3.3"
   }
-
 }

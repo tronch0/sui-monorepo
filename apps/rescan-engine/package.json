@@ -1,20 +1,24 @@
 {
-  "name": "@sui-monorepo/core",
+  "name": "rescan-engine",
   "version": "1.0.0",
-  "description": "Core package for printing messages",
+  "description": "App that runs a while loop to print messages using core package",
   "main": "dist/index.js",
-  "types": "dist/index.d.ts",
   "scripts": {
     "build": "../../node_modules/.bin/tsc",
+    "start": "node dist/index.js",
+    "start:dev": "../../node_modules/.bin/tsc && node dist/index.js",
+    "clean": "rm -rf dist",
     "lint": "eslint src --ext .ts,.tsx",
     "lint:fix": "eslint src --ext .ts,.tsx --fix",
     "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,md}\"",
-    "clean": "rm -rf dist",
     "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "@sui-monorepo/core": "workspace:*"
+  },
   "devDependencies": {
     "@types/node": "^22.14.1",
     "typescript": "^5.3.3"

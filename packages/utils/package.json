@@ -1,7 +1,7 @@
 {
-  "name": "@sui-monorepo/core",
+  "name": "@sui-monorepo/utils",
   "version": "1.0.0",
-  "description": "Core package for printing messages",
+  "description": "Utility functions package with triangle printer",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
