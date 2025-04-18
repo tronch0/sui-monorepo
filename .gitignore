@@ -1,14 +1,22 @@
 # Dependencies
 node_modules
+*/*/node_modules
 .pnp
 .pnp.js
+.pnpm-store/
 
 # Build outputs
 dist
+*/*/dist
 build
 out
 .next
 *.tsbuildinfo
+
+# Testing
+coverage
+*/*/coverage
+.nyc_output
 
 # Logs
 logs
@@ -36,4 +44,9 @@ lerna-debug.log*
 *.ntvs*
 *.njsproj
 *.sln
-*.sw? 
+*.sw?
+
+# Temporary files
+.tmp/
+tmp/
+temp/ 
