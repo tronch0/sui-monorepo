@@ -1,4 +1,4 @@
-# TypeScript Monorepo
+# Sui Monorepo
 
 A monorepo containing multiple packages and applications managed with PNPM workspaces.
 
